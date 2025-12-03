@@ -1,0 +1,154 @@
+/* .faq-hero-section { 
+  background: rgb(56, 104, 70);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+} */
+
+/* Apply Roboto Condensed to FAQ page */
+.faq-hero-section,
+.faq-hero-section *,
+.faq-container,
+.faq-container * {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.faq-hero-section {
+  position: relative;
+  background: rgba(56, 104, 70, 0.6);
+  color: white;
+  padding: 60px 20px 40px 20px;
+  padding-top: 100px;
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+
+.faq-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-hero-title {
+  font-size: 4rem;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.faq-hero-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+}
+
+.faq-loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.faq-error {
+  background: #fee;
+  color: #c33;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-empty {
+  text-align: center;
+  padding: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question-button {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e6F40;
+  transition: background 0.2s ease;
+}
+
+.faq-question-button:hover {
+  background: #f5f5f5;
+}
+
+.faq-answer {
+  padding: 0 24px 20px 24px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+.faq-help-section {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.faq-help-title {
+  color: #2e6F40;
+  margin-bottom: 12px;
+}
+
+.faq-help-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.faq-contact-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgb(83, 138, 99);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.faq-contact-button:hover {
+  background: rgb(70, 120, 85);
+}
+
+.faq-icon {
+  color: #2e6F40;
+}
+

@@ -1,0 +1,209 @@
+.resident-dashboard-container {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1000;
+  background-color: transparent;
+  margin-top: 2rem;
+}
+
+.resident-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1001;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.dashboard-container {
+
+  width: 100%;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two column landscape layout */
+  gap: 2rem;
+  text-align: left;
+  position: relative;
+  z-index: 1002;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Left column wrapper */
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 1003;
+  background-color: transparent;
+}
+
+/* Right column wrapper */
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 10px;
+  position: relative;
+  z-index: 1003;
+  background-color: transparent;
+}
+
+.dashboard-right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dashboard-right::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.dashboard-right::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.visitor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.visitor-card {
+  background-color: #ffffff;
+  padding: 2rem; /* more padding */
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  z-index: 14;
+}
+
+.visitor-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.status.approved { color: #16a34a; }
+.status.declined { color: #dc2626; }
+.status.pending { color: #ca8a04; }
+
+.message.error {
+  color: #dc2626;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.message.success {
+  color: #16a34a;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button.bg-green-500 { background-color: #16a34a; }
+button.bg-green-500:hover { background-color: #15803d; }
+
+button.bg-red-500 { background-color: #dc2626; }
+button.bg-red-500:hover { background-color: #b91c1c; }
+
+button.bg-gray-500 { background-color: #6b7280; }
+button.bg-gray-500:hover { background-color: #4b5563; }
+
+/* Ensure all white content cards are above decorative elements */
+.resident-dashboard > div,
+.resident-dashboard [style*="background: white"],
+.resident-dashboard [style*="background-color: white"],
+.resident-dashboard [style*="background: #ffffff"],
+.resident-dashboard [style*="background-color: #ffffff"],
+.dashboard-left > div,
+.dashboard-right > div {
+  position: relative;
+  z-index: 1004 !important;
+  background-color: #ffffff !important;
+}
+
+/* Center the dashboard content */
+.resident-dashboard h1,
+.resident-dashboard h2,
+.resident-dashboard h3 {
+  position: relative;
+  z-index: 1005;
+}
+
+/* Force all content inside to be above decorative shapes */
+.resident-dashboard * {
+  position: relative;
+  z-index: inherit;
+}
+
+/* Ensure form cards and request cards are above everything */
+.resident-dashboard [style*="padding"],
+.resident-dashboard [style*="boxShadow"],
+.resident-dashboard [style*="box-shadow"] {
+  z-index: 1006 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+  
+  .dashboard-right {
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .resident-dashboard {
+    padding: 15px;
+  }
+
+  .visitor-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resident-dashboard {
+    padding: 10px;
+  }
+
+  .visitor-card {
+    padding: 15px;
+  }
+
+  .visitor-cards {
+    grid-template-columns: 1fr;
+  }
+}

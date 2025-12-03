@@ -1,0 +1,498 @@
+/* Base Navbar Styles (Your Existing Code) */
+.icon {
+  width: 35px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(80%) saturate(600%) hue-rotate(90deg) brightness(90%) contrast(90%);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  z-index: 9999;
+  padding: 12px 20px;
+  min-height: 70px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Roboto Condensed', 'Open Sans', 'Lato', 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Apply Roboto Condensed to all navbar elements */
+.navbar,
+.navbar * {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.navbar-logo {
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  display: block;
+  height: clamp(50px, 8vw, 70px);
+  width: auto;
+  margin: 0;
+  object-fit: contain;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 20px);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar-links li:hover {
+  background-color: #f5f5f5;
+  color: #2e6F40;
+}
+
+.navbar-links li.active {
+  color: #2e6F40;
+  font-weight: 600;
+
+  padding-bottom: 6px;
+}
+
+.navbar-links li.dropdown.active > span {
+  color: #2e6F40;
+  font-weight: 600;
+
+  padding-bottom: 6px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 180px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  z-index: 10000;
+  margin-top: 2px; /* Small gap to prevent accidental hover loss */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+}
+
+.dropdown-menu li {
+  padding: 10px 16px;
+  white-space: nowrap;
+  color: #333;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown-menu li.active {
+  background-color: #f0f7f2;
+  color: #2e6F40;
+  font-weight: 600;
+
+}
+
+.dropdown-menu li:hover {
+  background-color: #f5f5f5;
+  color: #2e6F40;
+}
+
+/* CSS hover disabled - JavaScript controls dropdown visibility */
+/* This prevents conflicts between CSS and JavaScript state management */
+
+.notification-bell {
+  position: relative;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #ffffff;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.notif-item {
+  font-size: 12px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.notif-item:hover {
+  background-color: #f5f5f5;
+}
+
+.notif-empty {
+  padding: 10px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 12px;
+  }
+  
+  .navbar-links li {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+    min-height: 60px;
+  }
+
+  .navbar-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    order: 2;
+  }
+
+  .navbar-logo {
+    margin: 0;
+    order: 1;
+  }
+
+  .navbar-right {
+    order: 3;
+  }
+
+  .logo-image {
+    height: 50px;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+    transition: max-height 0.3s ease;
+    padding: 0;
+    gap: 0;
+    z-index: 9998;
+  }
+
+  .navbar-links.active {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  .navbar-links li:hover {
+    background-color: #f5f5f5;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    border-radius: 0;
+    min-width: 100%;
+    margin-top: 0;
+    background-color: #fafafa;
+  }
+
+  .dropdown-menu li {
+    padding-left: 40px;
+  }
+
+  .navbar-right {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.navbar-profile {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  align-self: center;
+  padding-right: 15px;
+  white-space: nowrap;
+}
+
+
+
+
+/* Hamburger button styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+@media (max-width: 768px) {
+  .notification-bell {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links li.visitor {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .visitor-icon {
+    display: inline-block !important;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+}
+
+/* Optional: adjust icon spacing */
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Login/Logout Button Styles */
+.navbar-auth-button {
+  padding: 10px 20px;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-weight: 600;
+  border: 1px solid #2e6F40;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Roboto Condensed', sans-serif;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.login-button {
+  color: #2e6F40;
+}
+
+.login-button:hover {
+  background-color: #2e6F40;
+  color: white;
+}
+
+.logout-button {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.logout-button:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive adjustments for auth buttons */
+@media (max-width: 768px) {
+  .navbar-auth-button {
+    width: auto;
+    padding: 10px 16px;
+  }
+}
+
+.navbar-auth-button.login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  /* Responsive sizing */
+  font-family: inherit;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.05rem); /* scales with viewport */
+ 
+
+  /* Plain visual style */
+  background: transparent;         /* plain look — change to a color if you want */
+  color: inherit;                  /* inherits navbar text color */
+  border: 1px solid currentColor;  /* simple outline */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Responsiveness & layout friendliness */
+  white-space: nowrap;
+  gap: 0.5rem;                     /* if you have an icon */
+  min-height: 40px;
+  line-height: 1;
+  box-sizing: border-box;
+
+  /* Micro-interaction */
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+/* Hover / active / focus — keep subtle and accessible */
+.navbar-auth-button.login-button:hover {
+  transform: translateY(-1px);
+  background: transparent;
+  
+}
+
+.navbar-auth-button.login-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus outline for keyboard users */
+.navbar-auth-button.login-button:focus {
+  outline: none;
+ 
+}
+
+/* Small screens: make the button take available space (stacked nav) */
+@media (max-width: 520px) {
+  .navbar-auth-button.login-button {
+    display: flex;         /* block-like in narrow navs */
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+  }
+}
+
+/* Optional: compact variant for very small nav bars */
+@media (max-width: 360px) {
+  .navbar-auth-button.login-button {
+    font-size: 0.92rem;
+    padding: 0.45rem 0.6rem;
+    min-height: 36px;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-auth-button.login-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,353 @@
+/* Admin Profile Dropdown - Roboto Condensed Font */
+.admin-profile-dropdown,
+.admin-profile-dropdown * {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+/* Admin Profile Dropdown */
+.admin-profile-dropdown {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-profile-picture {
+  width: clamp(35px, 4vw, 45px);
+  height: clamp(35px, 4vw, 45px);
+  min-width: 35px;
+  min-height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.admin-profile-picture:hover {
+  border-color: #c0c0c0;
+}
+
+.admin-profile-picture:active {
+  transform: scale(0.98);
+}
+
+.admin-profile-picture .profile-img,
+.admin-profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* Handle broken images */
+.admin-profile-picture img[src=""],
+.admin-profile-picture img:not([src]) {
+  background-image: url('../images/profile1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Profile Menu Dropdown */
+.admin-profile-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  z-index: 10001;
+  overflow: hidden;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-menu-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-img-large {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+.profile-menu-info {
+  flex: 1;
+}
+
+.profile-menu-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.profile-menu-email {
+  font-size: 12px;
+  color: #666;
+}
+
+.profile-menu-divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+.profile-menu-item {
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-menu-item:hover {
+  background: #ffffff;
+}
+
+.profile-menu-logout {
+  color: #dc3545;
+}
+
+.profile-menu-logout:hover {
+  background: #f5f5f5;
+}
+
+/* Change Password Modal */
+.change-password-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  padding: 20px;
+}
+
+.change-password-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.change-password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.change-password-header h3 {
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 20px;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.change-password-modal form {
+  padding: 20px;
+}
+
+.password-form-group {
+  margin-bottom: 20px;
+}
+
+.password-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.password-form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.password-form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.password-error {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #fcc;
+}
+
+.password-success {
+  background: #efe;
+  color: #3c3;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #cfc;
+}
+
+.password-form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.password-cancel-btn,
+.password-submit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.password-cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.password-cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.password-submit-btn {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.password-submit-btn:hover {
+  background: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-profile-picture {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .admin-profile-menu {
+    width: 250px;
+    left: 0;
+    transform: none;
+    right: auto;
+  }
+
+  .change-password-modal {
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-profile-picture {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .admin-profile-menu {
+    width: calc(100vw - 40px);
+    max-width: 280px;
+  }
+}
+

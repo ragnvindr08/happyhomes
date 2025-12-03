@@ -1,0 +1,270 @@
+/* Admin FAQ - Roboto Condensed Font */
+.admin-faq-hero-section,
+.admin-faq-hero-section *,
+.dashboard-main * {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.admin-faq-hero-section {
+  background: rgb(83, 138, 99);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.admin-faq-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-faq-hero-title {
+  font-size: 4rem;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.admin-faq-hero-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-faq-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+}
+
+.admin-faq-add-button-container {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.admin-faq-add-button {
+  padding: 12px 24px;
+  background: rgb(83, 138, 99);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.admin-faq-add-button:hover {
+  background: rgb(70, 120, 85);
+}
+
+.admin-faq-form {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-faq-form-title {
+  color: #2e6F40;
+  margin-bottom: 20px;
+}
+
+.admin-faq-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-faq-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-faq-form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-faq-form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.admin-faq-form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.admin-faq-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.admin-faq-form-row-item {
+  flex: 1;
+}
+
+.admin-faq-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.admin-faq-checkbox-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-faq-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.admin-faq-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.admin-faq-button-cancel {
+  background: #ccc;
+  color: #333;
+}
+
+.admin-faq-button-save {
+  background: rgb(83, 138, 99);
+  color: white;
+}
+
+.admin-faq-button-save:hover {
+  background: rgb(70, 120, 85);
+}
+
+.admin-faq-loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.admin-faq-error {
+  background: #fee;
+  color: #c33;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-faq-empty {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+}
+
+.admin-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-faq-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* .admin-faq-item-active {
+  border-left: 4px solid rgb(83, 138, 99);  
+} */
+
+.admin-faq-item-inactive {
+  border-left: 4px solid #ccc;
+}
+
+.admin-faq-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.admin-faq-item-main {
+  flex: 1;
+}
+
+.admin-faq-item-question {
+  color: #2e6F40;
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.admin-faq-item-answer {
+  color: #666;
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.admin-faq-item-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.admin-faq-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.admin-faq-action-button {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-faq-action-button-edit {
+  background: #4a90e2;
+  color: white;
+}
+
+.admin-faq-action-button-delete {
+  background: #e74c3c;
+  color: white;
+}
+

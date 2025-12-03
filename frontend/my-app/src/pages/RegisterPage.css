@@ -1,0 +1,352 @@
+/* Container - Apply Roboto Condensed to everything */
+.register-page,
+.register-page *,
+.register-container,
+.register-container *,
+.register-box,
+.register-box *,
+body .register-page,
+body .register-page *,
+body .register-container,
+body .register-container *,
+body .register-box,
+body .register-box *,
+.register-container input,
+.register-container button,
+.register-container h1,
+.register-container h2,
+.register-container h3,
+.register-container p,
+.register-container span,
+.register-container label,
+.register-container div {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Landscape Container - Two Column Layout */
+.register-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left side - Image/Branding */
+.register-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  min-width: 300px;
+}
+
+.register-logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 30px;
+  object-fit: contain;
+}
+
+.register-branding {
+  color: white;
+}
+
+.register-brand-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.register-brand-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.5;
+}
+
+/* Right side - Form Box */
+.register-box {
+  flex: 1;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  min-width: 400px;
+}
+
+.register-title {
+  color: #2e7d32;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+/* Inputs */
+.register-input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: white;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.register-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Buttons */
+.register-button,
+.login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #27642b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.login-button {
+  background-color: #444;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Number */
+.contact-number-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
+}
+
+.flag-icon {
+  width: 28px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.prefix {
+  font-size: 15px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.contact-input-wrapper {
+  flex: 1;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.verify-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.verify-button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+.error-text {
+  color: #d32f2f;
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+/* Responsive - Landscape to Portrait */
+@media (max-width: 1024px) {
+  .register-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .register-image {
+    min-width: auto;
+    padding: 20px;
+  }
+
+  .register-logo {
+    max-width: 250px;
+  }
+
+  .register-brand-title {
+    font-size: 2.5rem;
+  }
+
+  .register-brand-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .register-box {
+    min-width: auto;
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .register-container {
+    gap: 20px;
+  }
+
+  .register-box {
+    padding: 30px 25px;
+  }
+
+  .register-title {
+    font-size: 1.75rem;
+  }
+
+  .register-input,
+  .contact-input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .flag-icon {
+    width: 24px;
+  }
+
+  .prefix {
+    font-size: 14px;
+  }
+
+  .register-brand-title {
+    font-size: 2rem;
+  }
+
+  .register-brand-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
+  .register-page {
+    padding: 15px;
+  }
+
+  .register-box {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+
+  .register-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .register-input,
+  .contact-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register-button,
+  .login-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .flag-icon {
+    width: 20px;
+  }
+
+  .prefix {
+    font-size: 12px;
+  }
+
+  .register-image {
+    padding: 15px;
+  }
+
+  .register-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .register-brand-title {
+    font-size: 1.75rem;
+  }
+
+  .register-brand-subtitle {
+    font-size: 0.95rem;
+  }
+}
